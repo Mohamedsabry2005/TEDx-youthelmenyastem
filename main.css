@@ -9,7 +9,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: url(../images/custom-cursor.png), auto;
+    cursor: url(./images/custom-cursor.png), auto;
 }
 .fit-content {
     width: fit-content !important;
@@ -35,7 +35,7 @@ a {
     background-color: #ff2b06;
     color: rgb(255, 255, 255);
     transition: 0.2s;
-    cursor: url(../images/custom-cursor.png), auto;
+    cursor: url(./images/custom-cursor.png), auto;
 
 }
 
@@ -87,7 +87,7 @@ span.text-line {
     position: relative;
     color: black;
     display: block;
-    margin: 10px auto;
+    margin: 15px auto;
     width: fit-content;
 }
 .nav-link{
