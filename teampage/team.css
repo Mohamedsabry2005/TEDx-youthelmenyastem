@@ -80,7 +80,7 @@ a {
     position: relative;
     color: black;
     display: block;
-    margin: 10px auto;
+    margin: 15px auto;
     width: fit-content;
 }
 .nav-link{
@@ -242,11 +242,11 @@ footer span.underline {
 }
 
 /*  midea  */
-@media (min-width: 300px) and (max-width: 1399px) {
+@media (min-width: 200px) and (max-width: 1399px) {
     p.vertical-line {
         margin-top: 0px;
         width: fit-content;
-        font-size: 20px;
+        font-size: 18px;
     }
     .highboard .contactus {
         left: 10%;
