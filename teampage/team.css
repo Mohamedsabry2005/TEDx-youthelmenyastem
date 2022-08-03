@@ -245,8 +245,8 @@ footer span.underline {
 @media (min-width: 200px) and (max-width: 1399px) {
     p.vertical-line {
         margin-top: 0px;
-        width: fit-content;
-        font-size: 16px;
+        width: fit-content !important;
+        font-size: 12px;
     }
     .highboard .contactus {
         left: 10%;
