@@ -245,8 +245,13 @@ footer span.underline {
 @media (min-width: 200px) and (max-width: 1399px) {
     p.vertical-line {
         margin-top: 0px;
-        width: fit-content !important;
-        font-size: 12px;
+        width: fit-content;
+        font-size: 16px;
+    }
+
+    .highboard .image img {
+        width: 280px;
+        height: 450px;
     }
     .highboard .contactus {
         left: 10%;
@@ -259,6 +264,7 @@ footer span.underline {
         font-size: 30px;
         color: white;
     }
+    
 }
 
 @media (max-width: 800px) {
