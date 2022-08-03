@@ -254,11 +254,12 @@ footer span.underline {
         height: 450px;
     }
     .highboard .contactus {
-        left: 10%;
+        bottom: 20%;
+        left: 20%;
     }
     .highboard .contactus.special-absolute{
-        bottom: 10%;
-        left: 10%;
+        bottom: 20%;
+        left: 20%;
     }
     .highboard .contactus >* {
         font-size: 30px;
