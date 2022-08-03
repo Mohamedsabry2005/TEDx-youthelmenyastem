@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@400;700&display=swap');
+
+:root {
+    --ff-roboto: 'Roboto', sans-serif;
+    --ff-ubuntu: 'Ubuntu', sans-serif;
+}
+
+* {
+    font-family: var(--ff-roboto);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url(../images/custom-cursor.png), auto;
+}
+
+.fit-content {
+    width: fit-content !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+
+
+.button-primary {
+    width: fit-content !important;
+    border-radius: 5px;
+    border: 3px solid #ff2b06;
+    background-color: unset;
+    color: #ff2b06;
+    font-size: 20px;
+    line-height: 29px;
+    padding: 5px 15px;
+    display: block;
+    margin: auto;
+}
+
+.button-primary:hover {
+    background-color: #ff2b06;
+    color: rgb(255, 255, 255);
+    transition: 0.2s;
+    cursor: url(../images/custom-cursor.png), auto;
+
+}
+
+#preloader {
+    background-color: #021922;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100%;
+    position: fixed;
+    z-index: 10000;
+}
+
+/* custom cursor */
+.cursor {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 5px solid #ff2b06;
+    left: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: width 1000ms, height 1000ms;
+    z-index: 10000000000000000000000000000;
+}
+
+.cursor.large {
+    height: 70px;
+    width: 70px;
+}
+
+
+
+/* navbar */
+
+.nav-item a {
+    position: relative;
+    color: black;
+    display: block;
+    margin: 10px auto;
+    width: fit-content;
+}
+
+.nav-link {
+    font-family: var(--ff-ubuntu);
+}
+
+.nav-item a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 5px;
+    background: #ff2b06;
+    bottom: -8px;
+    left: 0;
+    transition: all 500ms;
+}
+
+a.special::after {
+    width: 100%;
+}
+
+.nav-item a:hover::after {
+    width: 100%;
+}
+
+
+/* hero section */
+.hero-image {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/commingsoon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-image h1 {
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 77px;
+}
+
+.hero-image span {
+    width: 145px;
+    height: 10px;
+    background-color: #ff2b06;
+    border-radius: 5px;
+}
+
+.hero-image p {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 77px;
+}
+
+/* end hero section */
+
+/* team highboard */
+
+.heading span {
+    width: 320px;
+    height: 5px;
+    background-color: #ff2b06;
+    border-radius: 3px;
+}
+
+.heading h2 {
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 73px;
+    width: fit-content;
+}
+
+p.vertical-line {
+    writing-mode: vertical-lr;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-top: 50px;
+    width: 0;
+}
+
+section-1 div.image {
+    position: relative;
+    width: fit-content;
+    height: 600px;
+}
+
+section-1 .image img {
+    object-fit: cover;
+}
+
+section-1 .image img:hover {
+    transition-duration: 0.5s;
+    filter: brightness(0.6);
+}
+
+section-1 .image img:hover~.contactus {
+    opacity: 1;
+    transition: 2s;
+}
+
+section-1 .contactus:hover {
+    opacity: 1;
+    transition: 2s;
+}
+
+section-1 .contactus {
+    opacity: 0;
+    position: absolute;
+    bottom: 17%;
+}
+
+section-1 .contactus.special-absolute {
+    bottom: 5%;
+}
+
+section-1 .contactus>* {
+    font-size: 40px;
+    color: white;
+}
+
+.show-more {
+    position: absolute;
+    bottom: 5%;
+}
+
+/* popup styling */
+
+.popup {
+    position: fixed;
+    z-index: 1000;
+    min-height: 100vh;
+    min-width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    margin-top: 30px;
+}
+
+div.active {
+    display: flex;
+}
+
+
+.popup .main-content {
+    background-color: #ffffff;
+    width: 1000px;
+    height: 600px;
+    margin: 10px;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: relative;
+    display: flex;
+}
+
+
+.popup .main-content .popup-image img {
+    object-fit: cover;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.popup .main-content .head {
+    padding: 10px;
+}
+
+.popup .main-content .head h2 {
+    font-size: 40px;
+    padding: 15px;
+}
+
+.popup .main-content .head p {
+    font-size: 15px;
+    line-height: 16px;
+    padding: 0 15px;
+}
+
+.popup .main-content .head div.close-btn {
+    font-size: 65px;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 5px;
+    top: -25px;
+    cursor: pointer;
+}
+
+
+
+/* footer */
+footer {
+    background-color: black;
+}
+
+.contactus {
+    min-width: 150px;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+footer p.number {
+    width: fit-content;
+    padding: 0 !important;
+}
+
+footer .contact a {
+    width: 50px;
+    height: 25px;
+    padding: 0;
+}
+
+footer ion-icon {
+    font-size: 25px;
+    color: white;
+    width: 50px !important;
+    padding: 0px !important;
+}
+
+.copyright span {
+    font-size: 25px;
+    color: #FF2B06;
+}
+
+.copyright p {
+    color: #d1d1d1;
+    font-size: 15px;
+}
+
+footer span.underline,
+footer span.line {
+    width: 75%;
+    height: 5px;
+    background-color: #FF2B06;
+    border-radius: 3px;
+    display: block;
+    margin: auto;
+}
+
+footer span.underline {
+    width: 50%;
+}
+
+
+/*  midea  */
+@media (max-width: 800px) {
+    .popup .main-content img {
+        display: none;
+    }
+
+    .popup .main-content {
+        height: fit-content !important;
+        margin: 100px 10px 0 10px !important;
+        padding: 20px 0;
+        z-index: 10000;
+    }
+
+    .cursor {
+        display: none;
+    }
+
+    .popup .main-content .head p {
+        font-size: 14px;
+
+    }
+}
+
+/*  midea on iphone se  */
+@media (max-width: 400px) {
+    .popup .main-content {
+        padding: 0px;
+    }
+
+    .popup .main-content .head p {
+        font-size: 10px;
+        line-height: 14px;
+        padding: 0px 5px;
+    }
+
+    .popup .main-content .head h2 {
+        font-size: 24px;
+        padding: 5px;
+    }
+
+    .button-primary {
+        font-size: 14px;
+        line-height: 14px;
+    }
+}
+
+    @media (min-width: 300px) and (max-width: 1399px) {
+        p.vertical-line {
+            margin-top: 0px;
+            width: fit-content;
+            font-size: 20px;
+        }
+
+        .highboard .contactus {
+            left: 10%;
+        }
+
+        .highboard .contactus.special-absolute {
+            bottom: 10%;
+            left: 10%;
+        }
+
+        .highboard .contactus>* {
+            font-size: 30px;
+            color: white;
+        }
+
+    }
