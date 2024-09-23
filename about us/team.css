@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@400;700&display=swap');
+
+:root{
+    --ff-roboto: 'Roboto', sans-serif;
+    --ff-ubuntu: 'Ubuntu', sans-serif;
+}
+
+*{
+    font-family: var(--ff-roboto);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url(../images/custom-cursor.png), auto;
+}
+.fit-content {
+    width: fit-content !important;
+}
+a {
+    text-decoration: none !important;
+}
+
+
+
+.button-primary {
+    width: fit-content !important;
+    border-radius: 5px;
+    border: 3px solid #ff2b06;
+    background-color: unset;
+    color: #ff2b06;
+    font-size: 20px;
+    line-height: 29px;
+    padding: 5px 15px;
+    display: block;
+    margin: auto;
+}
+
+.button-primary:hover {
+    background-color: #ff2b06;
+    color: rgb(255, 255, 255);
+    transition: 0.2s;
+    cursor: url(../images/custom-cursor.png), auto;
+
+}
+
+#preloader {
+    background-color: #021922;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100%;
+    position: fixed;
+    z-index: 10000;
+}
+
+/* custom cursor */
+.cursor {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 5px solid #ff2b06;
+    left: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: width 1000ms, height 1000ms;
+    z-index: 10000000000000000000000000000;
+}
+
+.cursor.large {
+    height: 70px;
+    width: 70px;
+}
+
+
+
+/* navbar */
+
+.nav-item a {
+    position: relative;
+    color: black;
+    display: block;
+    margin: 15px auto;
+    width: fit-content;
+}
+.nav-link{
+    font-family: var(--ff-ubuntu);
+}
+.nav-item a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 5px;
+    background: #ff2b06;
+    bottom: -8px;
+    left: 0;
+    transition: all 500ms;
+}
+a.special::after{
+    width: 100%;
+}
+
+.nav-item a:hover::after  {
+    width: 100%;
+}
+
+/* hero section */
+.hero-image {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/teambanner.png);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero-image h1 {
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 77px;
+}
+
+.hero-image span {
+    width: 145px;
+    height: 10px;
+    background-color: #FF2B06;
+    border-radius: 5px;
+}
+
+/* end hero section */
+
+/* team highboard */
+
+.heading span {
+    width: 320px ;
+    height: 5px;
+    background-color: #FF2B06;
+    border-radius: 3px;
+}
+
+.heading h2 {
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 73px;
+    width: fit-content;
+}
+
+p.vertical-line {
+    writing-mode: vertical-lr;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-top: 50px;
+    width: 0px;
+}
+
+.highboard div.image {
+    position: relative;
+    max-width: 470px;
+    height: 550px;
+
+}
+
+.highboard .image img {
+    object-fit: cover;
+}
+
+.highboard .image img:hover {
+    transition-duration: 0.5s;
+    filter: brightness(0.6);
+}
+
+.highboard .image img:hover ~ .contactus {
+    opacity: 1;
+    transition: 2s;
+}
+
+.highboard .contactus:hover {
+    opacity: 1;
+    transition: 2s;
+}
+
+.highboard .contactus {
+    opacity: 0;
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
+}
+
+.highboard .contactus.special-absolute{
+    bottom: 5%;
+}
+
+.highboard .contactus >* {
+    font-size: 40px;
+    color: white;
+}
+.highboard .special-img{
+    object-position: top;
+}
+
+/* footer */
+footer {
+    background-color: black;
+}
+.contactus {
+    min-width: 150px;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+footer .contact a{
+    width: 50px;
+    height: 25px;
+    padding: 0;
+}
+footer p.number {
+    width: fit-content;
+    padding:0!important;
+}
+footer  ion-icon {
+    font-size: 25px;
+    color: white;
+    width: 50px !important;
+    padding: 0px !important;
+}
+.copyright span{
+    font-size:25px;
+    color: #FF2B06;
+}
+.copyright p{
+    color: #d1d1d1;
+    font-size: 15px;
+}
+footer span.underline , footer span.line  {
+    width: 75% ;
+    height: 5px;
+    background-color: #FF2B06;
+    border-radius: 3px;
+    display: block;
+    margin: auto;
+}
+footer span.underline {
+    width: 50% ;
+}
+
+/*  midea  */
+@media (min-width: 200px) and (max-width: 1399px) {
+    p.vertical-line {
+        margin-top: 0px;
+        width: fit-content;
+        font-size: 16px;
+    }
+
+    .highboard .image img {
+        width: 280px;
+        height: 450px;
+    }
+    .highboard .contactus {
+        bottom: 20%;
+        left: 20%;
+    }
+    .highboard .contactus.special-absolute{
+        bottom: 20%;
+        left: 20%;
+    }
+    .highboard .contactus >* {
+        font-size: 30px;
+        color: white;
+    }
+    
+}
+
+@media (max-width: 800px) {
+    .cursor{
+        display: none;
+    }
+}

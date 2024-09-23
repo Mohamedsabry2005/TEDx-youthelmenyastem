@@ -1,19 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@400;700&display=swap');
-:root{
+
+:root {
     --ff-roboto: 'Roboto', sans-serif;
     --ff-ubuntu: 'Ubuntu', sans-serif;
 }
 
-*{
+* {
     font-family: var(--ff-roboto);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     cursor: url(./images/custom-cursor.png), auto;
 }
+
+#loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Adjust opacity as needed */
+    z-index: 9999;
+    /* Ensure it appears on top of other elements */
+}
+
+.loader {
+    border: 16px solid #ec2929;
+    border-top: 16px solid #ffffff;
+    /* Blue top border */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .fit-content {
     width: fit-content !important;
 }
+
 a {
     text-decoration: none !important;
 }
@@ -90,9 +128,11 @@ span.text-line {
     margin: 15px auto;
     width: fit-content;
 }
-.nav-link{
+
+.nav-link {
     font-family: var(--ff-ubuntu);
 }
+
 .nav-item a::after {
     content: '';
     position: absolute;
@@ -103,25 +143,29 @@ span.text-line {
     left: 0;
     transition: all 500ms;
 }
-a.special::after{
+
+a.special::after {
     width: 100%;
 }
 
-.nav-item a:hover::after  {
+.nav-item a:hover::after {
     width: 100%;
 }
 
-
+.navbar-brand img {
+    width: 120px;
+}
 
 /* hero section */
 .hero-image {
     width: 100%;
     height: 100vh;
     background-image: url(./images/heroimage.png);
-    background-position:center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .hero-image h1 {
     font-weight: 400;
     font-size: 64px;
@@ -144,7 +188,6 @@ a.special::after{
 /* end hero section */
 
 /* start section 2 */
-
 section-2 h2 {
     font-weight: 400;
     font-size: 48px;
@@ -152,8 +195,18 @@ section-2 h2 {
     margin-bottom: 15px;
 }
 
+section-2 img {
+    max-width: 450px;
+    min-width: 300px;
+    width: 100%;
+    height: 350px;
+    min-height: 200px;
+    object-fit: cover;
+    border-radius: 23px;
+}
+
 section-2 span {
-    margin-bottom:35px ;
+    margin-bottom: 35px;
 }
 
 section-2 p {
@@ -179,10 +232,12 @@ section-3 span.special {
     border-radius: 3px;
     background-color: #FF2B06;
 }
+
 section-3 p {
     font-size: 24px;
 }
-.partners a{
+
+.partners a {
     width: fit-content;
 }
 
@@ -193,12 +248,18 @@ section-3 p {
 footer {
     background-color: black;
 }
+
+footer .logo {
+    width: 150px;
+}
+
 .contactus {
     min-width: 150px;
     font-size: 20px;
     letter-spacing: 2px;
 }
-footer .contact a{
+
+footer .contact a {
     width: 50px;
     height: 25px;
     padding: 0;
@@ -206,23 +267,28 @@ footer .contact a{
 
 footer p.number {
     width: fit-content;
-    padding:0!important;
+    padding: 0 !important;
 }
-footer  ion-icon {
+
+footer ion-icon {
     font-size: 25px;
     color: white;
     width: 50px !important;
     padding: 0px !important;
 }
-.copyright span{
-    font-size:25px;
+
+.copyright span {
+    font-size: 25px;
     color: #FF2B06;
 }
-.copyright p{
+
+.copyright p {
     color: #d1d1d1;
     font-size: 15px;
 }
-footer span.underline , footer span.line  {
+
+footer span.underline,
+footer span.line {
     width: 75%;
     height: 5px;
     background-color: #FF2B06;
@@ -230,13 +296,14 @@ footer span.underline , footer span.line  {
     display: block;
     margin: auto;
 }
+
 footer span.underline {
-    width: 50% ;
+    width: 50%;
 }
 
 /*  midea  */
 @media (max-width: 800px) {
-    .cursor{
+    .cursor {
         display: none;
     }
 }
