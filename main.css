@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@400;700&display=swap');
-body{
+body,section-1>*,section-2>*,.highboard>*{
     overflow-x: hidden;
 }
 :root {
@@ -13,7 +13,6 @@ body{
     padding: 0;
     box-sizing: border-box;
     cursor: url(./images/custom-cursor.png), auto;
-    overflow-x: hidden;
 }
 
 #loading-screen {
@@ -145,18 +144,23 @@ span.text-line {
     bottom: -8px;
     left: 0;
     transition: all 500ms;
+    overflow-x: visible;
 }
 
 a.special::after {
     width: 100%;
+    overflow-x: visible;
+
 }
 
 .nav-item a:hover::after {
     width: 100%;
+    overflow-x: visible;
+
 }
 
 .navbar-brand img {
-    width: 120px;
+    width: 180px;
 }
 
 /* hero section */
